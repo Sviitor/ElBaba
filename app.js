@@ -28,7 +28,7 @@ app.use((req, res, next)=>{
     next();  
 });  
 app.get('/.well-known/pki-validation/2383CFD4465ABA418F253EF8BAA200EF.txt', (req , res) =>{
-    res.sendFile(/home/ec2-user/ElBaba/2383CFD4465ABA418F253EF8BAA200EF.txt);
+    res.sendFile(/home/ec2-user/ElBaba/ElBaba/2383CFD4465ABA418F253EF8BAA200EF.txt);
 });
  app.use('/api/players', addPlayerRoutes);
 
