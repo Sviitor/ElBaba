@@ -43,7 +43,7 @@ const normalizePort = val => {
     console.log( " Listening on " + bind);  
   };  
 
-const port = normalizePort(process.env.PORT || "4000"); 
+const port = normalizePort(process.env.PORT || "8000"); 
 app.set('port', port);
 const server = http.createServer(app);  
 server.on("error", onError);  
