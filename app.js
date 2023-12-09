@@ -6,8 +6,8 @@ const playermodel = require("./models/player");
 const Partidas = require("./models/partidas");
 const mongoose = require('mongoose');  
 const addPlayerRoutes = require('./routes/add-player');
-const fs = require('fs');
-const file = fs.readFileSync('./2383CFD4465ABA418F253EF8BAA200EF.txt')
+
+
 
 mongoose.connect("mongodb+srv://saulovitorabreu:qdsawert@baba.kpflklg.mongodb.net/")
 .then(()=>{  
@@ -27,9 +27,7 @@ app.use((req, res, next)=>{
         "GET, POST, PATCH, DELETE, OPTIONS"); 
     next();  
 });  
-app.get('/.well-known/pki-validation/2383CFD4465ABA418F253EF8BAA200EF.txt', (req , res) =>{
-    res.sendFile('/home/ec2-user/ElBaba/ElBaba/2383CFD4465ABA418F253EF8BAA200EF.txt');
-});
+
  app.use('/api/players', addPlayerRoutes);
 
 
